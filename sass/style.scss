@@ -1,0 +1,308 @@
+@import "generales";
+@import "productos";
+
+h1 {
+    font-size: 0px;
+}
+
+.masvendido {
+    grid-area: productos;
+}
+
+.fotosindex {
+    margin: 10px 0px;
+}
+
+.ventaflex,
+.masvendido {
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    color: rgb(3, 3, 3);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.ABORDE {
+    display: flex;
+    border: 5px solid rgb(214, 214, 212);
+    margin: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 95%;
+    font-size: 20px;
+    align-items: center;
+}
+
+.ABORDE:hover {
+    border-color: crimson;
+}
+
+.sets:hover {
+    border-color: crimson;
+}
+
+.masvendido img {
+    width: 100%;
+}
+
+.promocion {
+    grid-area: ofertas;
+}
+
+.fotosindex {
+    grid-area: carrusel;
+}
+
+.subti {
+    grid-area: masvendido;
+    margin-top: 50px;
+
+    h2 {
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.subti2 {
+    grid-area: promos;
+    margin-top: 30px;
+
+    h2 {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.grilla {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav "
+        "carrusel"
+        "masvendido"
+        "productos "
+        "promos "
+        "ofertas"
+        "footer ";
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 0.5fr 2fr 0.5fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.promocion img {
+    width: 100%;
+}
+
+.grilla2 {
+    display: grid;
+    grid-template-areas:
+        "header  "
+        " nav"
+        "contacto"
+        "enviar"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1.5fr 0.5fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.enviar {
+    grid-area: enviar;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        background-color: #0BA385;
+        border-radius: 10px;
+        margin: 3% 45%;
+    }
+}
+
+.contacto {
+    grid-area: contacto;
+    width: 40%;
+    margin: 5% 30%;
+
+    input {
+        margin: 0;
+    }
+}
+
+.grilla3 {
+    display: grid;
+    grid-template-areas:
+        "header "
+        "nav "
+        "producto"
+        "footer ";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.75fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+.grilla4 {
+    display: grid;
+    grid-template-areas:
+        "header "
+        "nav "
+        "pasos "
+        "footer ";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.pasos {
+    grid-area: pasos
+}
+
+.grilla5 {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "dudas"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.75fr 4fr 2fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.subtitulo {
+    border: 10px solid rgb(199, 148, 124);
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 5px;
+    p {
+        display: block;
+        margin: 10px;
+    }
+}
+.dudas {
+    grid-area: dudas;
+}
+
+.icon {
+    width: 35px;
+}
+
+.ICON2 {
+    width: 5%;
+}
+
+@media(min-width:500px) {
+    .grilla,
+    .grilla3 {
+        display: grid;
+    }
+
+    header img {
+        width: 15%;
+        height: 75%;
+        margin-left: 4%;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        margin-top: -2em;
+        color: aliceblue;
+    }
+
+    .ventaflex,
+    .masvendido,
+    .tienda-productos {
+        justify-content: space-around;
+        background-color:#f8e3b7;
+        color: rgb(13, 13, 14);
+    }
+
+    .ABORDE,
+    .sets {
+        border: 5px solid rgb(15, 10, 10);
+        font-size: 25px;
+    }
+
+    .subti h2,
+    .subti2 h2 {
+        font-size: 35px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: crimson;
+    }
+    input{
+        background-color: crimson;
+    }
+}
+
+@media (min-width:768px){
+
+    .grilla,
+    .grilla3 {
+        display: grid;
+    }
+
+    header img {
+        width: 10%;
+        height: 80%;
+    }
+
+    .ventaflex,
+    .masvendido{
+        background-color: aliceblue;
+        color: rgb(10, 10, 10);
+        font-size: 30px;
+        display: flex;
+        width: 100%;
+    }
+
+    .tienda-productos {
+        width: 100%;
+        color: rgb(10, 10, 10);
+        display: flex;
+        flex-wrap: wrap;
+        background-color: aliceblue;
+        flex-direction: row;
+        .sets {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .ABORDE,
+    .sets,
+    .subtitulo {
+        border: 5px solid #0BA385;
+    }
+
+    input {
+        background-color: black;
+    }
+
+    .subtitulo h2 {
+        color: blueviolet;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ABORDE,
+    .sets,
+    .subtitulo {
+        border: 5px solid #cc1158;
+    }
+    input{
+        background-color: #0BA385;
+    }
+    .ABORDE:hover,.sets:hover{
+        border-color: #0BA385;
+    }
+}
